@@ -89,7 +89,9 @@ app.post("/menu",async(req,res)=>{
 
 app.use("/person",personRoutes);
 app.use("/menu",menuRoutes);
-
+app.use("/",function(req,res){
+        res.send("Welcome to my hotel..How Can I help you?We have list of Menus")
+});
 // app.get("/person/:workType",async(req,res)=>{
 //     try{
 //         const workType=req.params.workType;

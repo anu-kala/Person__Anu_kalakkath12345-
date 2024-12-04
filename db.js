@@ -15,7 +15,8 @@ const mongoURL=process.env.MONGO_URL;
 
 mongoose.connect(mongoURL,{
     useNewUrlParser:true,
-    useUnifiedTopology:true
+    useUnifiedTopology:true,
+    tls: true,
 })
 
 //Get the default connection

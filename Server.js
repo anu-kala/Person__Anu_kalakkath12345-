@@ -7,6 +7,8 @@ const bodyParser=require("body-parser");
 app.use(bodyParser.json());//req.body
 const personRoutes=require("./routes/personRoutes");
 const menuRoutes=require("./routes/menuRoutes");
+require('dotenv').config();
+
 
 
 // app.get("/",function(req,res){
@@ -113,7 +115,7 @@ app.use("/menu",menuRoutes);
    
 // })
 
-
+const PORT=process.env.PORT || 5000;
 app.listen(5000,()=>{
     console.log("Server is running")
 })
